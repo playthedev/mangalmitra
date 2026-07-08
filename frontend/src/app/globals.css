@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf1e0;
+  --foreground: #3d1f10;
+
+  --color-terracotta-50: #fdf0e6;
+  --color-terracotta-100: #f8d9bd;
+  --color-terracotta-200: #f0b98a;
+  --color-terracotta-300: #e4915a;
+  --color-terracotta-400: #d5713d;
+  --color-terracotta-500: #c1552a;
+  --color-terracotta-600: #a34220;
+  --color-terracotta-700: #82341b;
+  --color-terracotta-800: #5f2615;
+  --color-terracotta-900: #3d180d;
+
+  --color-marigold-50: #fff6df;
+  --color-marigold-100: #ffe7a8;
+  --color-marigold-200: #ffd670;
+  --color-marigold-300: #ffc23e;
+  --color-marigold-400: #f7a924;
+  --color-marigold-500: #e8930f;
+  --color-marigold-600: #c1760a;
+  --color-marigold-700: #955b0c;
+  --color-marigold-800: #6b420e;
+  --color-marigold-900: #422a0a;
+
+  --color-maroon-50: #fbe9e7;
+  --color-maroon-100: #f0c2bc;
+  --color-maroon-200: #dd8f85;
+  --color-maroon-300: #c25f52;
+  --color-maroon-400: #9c3d2f;
+  --color-maroon-500: #7a281b;
+  --color-maroon-600: #5f1c12;
+  --color-maroon-700: #48140c;
+  --color-maroon-800: #340d07;
+  --color-maroon-900: #220804;
+
+  --color-parchment-50: #fffaf0;
+  --color-parchment-100: #fbf1e0;
+  --color-parchment-200: #f5e4c8;
+  --color-parchment-300: #edd3a9;
+  --color-parchment-400: #e2bd85;
+  --color-parchment-500: #cf9f5c;
+
+  --color-gold-50: #fbf4dc;
+  --color-gold-100: #f5e6b0;
+  --color-gold-200: #ecd280;
+  --color-gold-300: #e2be50;
+  --color-gold-400: #d8b13f;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #ad8c26;
+  --color-gold-700: #86691c;
+  --color-gold-800: #5f4913;
+  --color-gold-900: #382a0a;
+
+  --color-sandalwood-50: #fbf1e6;
+  --color-sandalwood-100: #f3ddc3;
+  --color-sandalwood-200: #ecc9a0;
+  --color-sandalwood-300: #e8c39e;
+  --color-sandalwood-400: #dba874;
+  --color-sandalwood-500: #cd9350;
+  --color-sandalwood-600: #a8763c;
+  --color-sandalwood-700: #825a2d;
+  --color-sandalwood-800: #5c3f1f;
+  --color-sandalwood-900: #362512;
+
+  /* kept as aliases so existing components referencing saffron-* still resolve to the new warmer terracotta tones */
+  --color-saffron-50: var(--color-terracotta-50);
+  --color-saffron-100: var(--color-terracotta-100);
+  --color-saffron-200: var(--color-terracotta-200);
+  --color-saffron-300: var(--color-terracotta-300);
+  --color-saffron-400: var(--color-terracotta-400);
+  --color-saffron-500: var(--color-terracotta-500);
+  --color-saffron-600: var(--color-terracotta-600);
+  --color-saffron-700: var(--color-terracotta-700);
+  --color-saffron-800: var(--color-terracotta-800);
+  --color-saffron-900: var(--color-terracotta-900);
+
+  --color-ivory-50: var(--color-parchment-50);
+  --color-ivory-100: var(--color-parchment-100);
+  --color-ivory-200: var(--color-parchment-200);
+  --color-ivory-300: var(--color-parchment-300);
+  --color-ivory-400: var(--color-parchment-400);
+  --color-ivory-500: var(--color-parchment-500);
+
+  --color-diya-glow: #ffb347;
+  --color-diya-ember: #ff7043;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-terracotta-50: var(--color-terracotta-50);
+  --color-terracotta-100: var(--color-terracotta-100);
+  --color-terracotta-200: var(--color-terracotta-200);
+  --color-terracotta-300: var(--color-terracotta-300);
+  --color-terracotta-400: var(--color-terracotta-400);
+  --color-terracotta-500: var(--color-terracotta-500);
+  --color-terracotta-600: var(--color-terracotta-600);
+  --color-terracotta-700: var(--color-terracotta-700);
+  --color-terracotta-800: var(--color-terracotta-800);
+  --color-terracotta-900: var(--color-terracotta-900);
+
+  --color-marigold-50: var(--color-marigold-50);
+  --color-marigold-100: var(--color-marigold-100);
+  --color-marigold-200: var(--color-marigold-200);
+  --color-marigold-300: var(--color-marigold-300);
+  --color-marigold-400: var(--color-marigold-400);
+  --color-marigold-500: var(--color-marigold-500);
+  --color-marigold-600: var(--color-marigold-600);
+  --color-marigold-700: var(--color-marigold-700);
+  --color-marigold-800: var(--color-marigold-800);
+  --color-marigold-900: var(--color-marigold-900);
+
+  --color-maroon-50: var(--color-maroon-50);
+  --color-maroon-100: var(--color-maroon-100);
+  --color-maroon-200: var(--color-maroon-200);
+  --color-maroon-300: var(--color-maroon-300);
+  --color-maroon-400: var(--color-maroon-400);
+  --color-maroon-500: var(--color-maroon-500);
+  --color-maroon-600: var(--color-maroon-600);
+  --color-maroon-700: var(--color-maroon-700);
+  --color-maroon-800: var(--color-maroon-800);
+  --color-maroon-900: var(--color-maroon-900);
+
+  --color-parchment-50: var(--color-parchment-50);
+  --color-parchment-100: var(--color-parchment-100);
+  --color-parchment-200: var(--color-parchment-200);
+  --color-parchment-300: var(--color-parchment-300);
+  --color-parchment-400: var(--color-parchment-400);
+  --color-parchment-500: var(--color-parchment-500);
+
+  --color-saffron-50: var(--color-saffron-50);
+  --color-saffron-100: var(--color-saffron-100);
+  --color-saffron-200: var(--color-saffron-200);
+  --color-saffron-300: var(--color-saffron-300);
+  --color-saffron-400: var(--color-saffron-400);
+  --color-saffron-500: var(--color-saffron-500);
+  --color-saffron-600: var(--color-saffron-600);
+  --color-saffron-700: var(--color-saffron-700);
+  --color-saffron-800: var(--color-saffron-800);
+  --color-saffron-900: var(--color-saffron-900);
+
+  --color-ivory-50: var(--color-ivory-50);
+  --color-ivory-100: var(--color-ivory-100);
+  --color-ivory-200: var(--color-ivory-200);
+  --color-ivory-300: var(--color-ivory-300);
+  --color-ivory-400: var(--color-ivory-400);
+  --color-ivory-500: var(--color-ivory-500);
+
+  --color-gold-50: var(--color-gold-50);
+  --color-gold-100: var(--color-gold-100);
+  --color-gold-200: var(--color-gold-200);
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
+  --color-gold-700: var(--color-gold-700);
+  --color-gold-800: var(--color-gold-800);
+  --color-gold-900: var(--color-gold-900);
+
+  --color-sandalwood-50: var(--color-sandalwood-50);
+  --color-sandalwood-100: var(--color-sandalwood-100);
+  --color-sandalwood-200: var(--color-sandalwood-200);
+  --color-sandalwood-300: var(--color-sandalwood-300);
+  --color-sandalwood-400: var(--color-sandalwood-400);
+  --color-sandalwood-500: var(--color-sandalwood-500);
+  --color-sandalwood-600: var(--color-sandalwood-600);
+  --color-sandalwood-700: var(--color-sandalwood-700);
+  --color-sandalwood-800: var(--color-sandalwood-800);
+  --color-sandalwood-900: var(--color-sandalwood-900);
+
+  --color-diya-glow: var(--color-diya-glow);
+  --color-diya-ember: var(--color-diya-ember);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(196, 110, 45, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(122, 40, 27, 0.05), transparent 45%);
+}
+
+.paper-grain {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>");
+}
+
+.mandala-corner {
+  background-image: radial-gradient(
+      circle,
+      transparent 60%,
+      var(--color-marigold-200) 60.5%,
+      var(--color-marigold-200) 62%,
+      transparent 62.5%
+    ),
+    radial-gradient(
+      circle,
+      transparent 70%,
+      var(--color-terracotta-200) 70.5%,
+      var(--color-terracotta-200) 71.5%,
+      transparent 72%
+    );
+  background-size: 100px 100px;
+  opacity: 0.25;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px var(--color-diya-glow));
+  }
+  50% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 12px var(--color-diya-glow));
+  }
+}
+
+@keyframes drift-up {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-220px) translateX(30px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes float-petal {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(40px) rotate(360deg);
+  }
+}
+
+@keyframes fly-across {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(130vw) translateY(-40px);
+    opacity: 0;
+  }
+}
+
+@keyframes bell-sway {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+.animate-flicker {
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+.animate-drift-up {
+  animation: drift-up 6s ease-in infinite;
+}
+
+.animate-float-petal {
+  animation: float-petal linear infinite;
+}
+
+.animate-fly-across {
+  animation: fly-across linear infinite;
+}
+
+.animate-bell-sway {
+  animation: bell-sway 3s ease-in-out infinite;
+}
+
+@keyframes om-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.7));
+    opacity: 1;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Heaven's gates: the two door panels swing outward on their hinges */
+@keyframes door-open-left {
+  0% {
+    transform: perspective(1600px) translateZ(0) rotateY(0deg);
+  }
+  /* a breath of resistance — the doors ease into motion, not snap */
+  18% {
+    transform: perspective(1600px) translateZ(0) rotateY(-4deg);
+  }
+  100% {
+    transform: perspective(1600px) translateZ(120px) rotateY(-112deg);
+  }
+}
+
+@keyframes door-open-right {
+  0% {
+    transform: perspective(1600px) translateZ(0) rotateY(0deg);
+  }
+  18% {
+    transform: perspective(1600px) translateZ(0) rotateY(4deg);
+  }
+  100% {
+    transform: perspective(1600px) translateZ(120px) rotateY(112deg);
+  }
+}
+
+/* The whole scene drifts forward, as if the viewer is drawn through the gate into Swarg. */
+@keyframes gate-approach {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.35);
+  }
+}
+
+/* Heaven's light behind the doors: grows brighter and blooms toward the viewer,
+   then a soft white radiance eases the transition into the page. */
+@keyframes gate-glow-fade {
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.9);
+  }
+}
+
+/* Final divine bloom — a gentle white wash that crossfades into the destination. */
+@keyframes gate-bloom {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-om-breathe {
+  animation: om-breathe 4.5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flicker,
+  .animate-drift-up,
+  .animate-float-petal,
+  .animate-fly-across,
+  .animate-bell-sway,
+  .animate-om-breathe,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+}
