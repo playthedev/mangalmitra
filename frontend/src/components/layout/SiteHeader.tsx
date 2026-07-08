@@ -100,12 +100,12 @@ export function SiteHeader() {
           >
             <User className="h-5 w-5" aria-hidden="true" />
           </Link>
-          <Link
+          {/* <Link
             href="/login"
             className="hidden rounded-full border border-marigold-400 px-4 py-1.5 text-sm font-medium text-maroon-700 transition-colors hover:bg-marigold-50 sm:inline-flex"
           >
             Sign In
-          </Link>
+          </Link> */}
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
@@ -146,13 +146,13 @@ export function SiteHeader() {
                   {link.label}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 href="/login"
                 onClick={closeMenu}
                 className="mt-2 rounded-xl border border-marigold-400 px-4 py-2.5 text-center font-medium text-maroon-700 transition-colors hover:bg-marigold-50 sm:hidden"
               >
                 Sign In
-              </Link>
+              </Link> */}
             </div>
           </motion.nav>
         )}
